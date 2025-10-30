@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&family=Sedan:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Sedan', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E8D4A7; /* Golden Batter */
+  color: #442D1C; /* Couhide Cocoa */
+}
+
+/* New Color Palette from Upload */
+:root {
+  --couhide-cocoa: #442D1C;
+  --spiced-wine: #743014;
+  --olive-harvest-dark: #64592B;
+  --olive-harvest-light: #9D9167;
+  --golden-batter: #E8D4A7;
+  --createmor-accent: #64592B;
+}
+
+/* Dark mode color palette */
+.dark {
+  --couhide-cocoa: #E8D4A7;
+  --spiced-wine: #9D9167;
+  --olive-harvest-dark: #E8D4A7;
+  --olive-harvest-light: #64592B;
+  --golden-batter: #442D1C;
+  --createmor-accent: #9D9167;
+}
+
+/* Custom scrollbar with new colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(232, 212, 167, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 89, 43, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 89, 43, 0.8);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(68, 45, 28, 0.1);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(157, 145, 103, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 145, 103, 0.8);
+}
+
+/* React D3 Tree custom styles with new theme */
+.rd3t-link {
+  stroke-width: 2px;
+  stroke: #9D9167; /* Olive Harvest Light */
+  transition: all 0.3s ease;
+}
+
+.rd3t-link:hover {
+  stroke: #64592B; /* Olive Harvest Dark */
+  stroke-width: 3px;
+}
+
+.dark .rd3t-link {
+  stroke: #64592B;
+}
+
+.dark .rd3t-link:hover {
+  stroke: #9D9167;
+}
+
+.rd3t-node-clickable {
+  cursor: pointer !important;
+  transition: all 0.3s ease;
+}
+
+/* Glass morphism utility with new color tint */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(232, 212, 167, 0.8);
+  border: 1px solid rgba(157, 145, 103, 0.2);
+}
+
+.glass-dark {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(68, 45, 28, 0.8);
+  border: 1px solid rgba(100, 89, 43, 0.1);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Focus styles for accessibility with new colors */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #64592B;
+  outline-offset: 2px;
+}
+
+.dark button:focus-visible,
+.dark input:focus-visible {
+  outline: 2px solid #9D9167;
+}
+
+/* Typography with new fonts */
+.vintage-heading {
+  font-family: 'Expletus Sans', serif;
+  font-weight: 700;
+  color: #442D1C;
+}
+
+.dark .vintage-heading {
+  color: #E8D4A7;
+}
+
+.vintage-subheading {
+  font-family: 'Expletus Sans', serif;
+  font-weight: 600;
+  color: #64592B;
+}
+
+.dark .vintage-subheading {
+  color: #9D9167;
+}
+
+.vintage-body {
+  font-family: 'Sedan', sans-serif;
+  font-weight: 400;
+  color: #442D1C;
+  line-height: 1.6;
+}
+
+.dark .vintage-body {
+  color: #E8D4A7;
+}
+
+/* Button styles with new colors */
+.vintage-button {
+  font-family: 'Expletus Sans', sans-serif;
+  font-weight: 600;
+  background: linear-gradient(135deg, #9D9167 0%, #64592B 100%);
+  color: #E8D4A7;
+  border: 1px solid #64592B;
+  transition: all 0.3s ease;
+}
+
+.vintage-button:hover {
+  background: linear-gradient(135deg, #64592B 0%, #743014 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 89, 43, 0.3);
+}
+
+.dark .vintage-button {
+  background: linear-gradient(135deg, #64592B 0%, #743014 100%);
+  color: #E8D4A7;
+  border: 1px solid #9D9167;
+}
+
+.dark .vintage-button:hover {
+  background: linear-gradient(135deg, #743014 0%, #9D9167 100%);
+}
+
+.vintage-button-secondary {
+  font-family: 'Expletus Sans', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  color: #64592B;
+  border: 2px solid #9D9167;
+  transition: all 0.3s ease;
+}
+
+.vintage-button-secondary:hover {
+  background: #9D9167;
+  color: #E8D4A7;
+  border-color: #64592B;
+}
+
+.dark .vintage-button-secondary {
+  color: #9D9167;
+  border: 2px solid #64592B;
+}
+
+.dark .vintage-button-secondary:hover {
+  background: #64592B;
+  color: #E8D4A7;
+  border-color: #9D9167;
+}
+
+/* Card styles */
+.vintage-card {
+  background: #FFFFFF;
+  border: 1px solid #9D9167;
+  box-shadow: 0 4px 20px rgba(100, 89, 43, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vintage-card:hover {
+  box-shadow: 0 8px 30px rgba(100, 89, 43, 0.15);
+  transform: translateY(-2px);
+}
+
+.vintage-card-dark {
+  background: #743014; /* Spiced Wine */
+  border: 1px solid #64592B;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark .vintage-card-dark:hover {
+  box-shadow: 0 8px 30px rgba(232, 212, 167, 0.15);
+}
+
+/* Badge styles */
+.vintage-badge {
+  font-family: 'Expletus Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background: #743014; /* Spiced Wine */
+  color: #E8D4A7;
+  border-radius: 12px;
+}
+
+.vintage-badge-gold {
+  background: linear-gradient(135deg, #E8D4A7 0%, #9D9167 100%);
+  color: #442D1C;
+}
+
+.vintage-badge-olive {
+  background: linear-gradient(135deg, #9D9167 0%, #64592B 100%);
+  color: #E8D4A7;
+}
+
+.vintage-badge-cocoa {
+  background: linear-gradient(135deg, #442D1C 0%, #743014 100%);
+  color: #E8D4A7;
+}
+
+/* Border animations */
+.vintage-border {
+  position: relative;
+}
+
+.vintage-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #9D9167, #64592B, #743014) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  border-radius: inherit;
+}
+
+/* Print styles for family tree */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .vintage-card {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Selection styles */
+::selection {
+  background-color: rgba(157, 145, 103, 0.3);
+  color: #442D1C;
+}
+
+::-moz-selection {
+  background-color: rgba(157, 145, 103, 0.3);
+  color: #442D1C;
+}
+
+.dark ::selection {
+  background-color: rgba(100, 89, 43, 0.3);
+  color: #E8D4A7;
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(100, 89, 43, 0.3);
+  color: #E8D4A7;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #64592B 0%, #743014 50%, #9D9167 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #9D9167 0%, #E8D4A7 50%, #64592B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Family tree specific styles */
+.family-tree-node {
+  font-family: 'Expletus Sans', sans-serif;
+  border: 2px solid #9D9167;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.family-tree-node:hover {
+  border-color: #64592B;
+  background: #F8F6F0;
+  transform: scale(1.05);
+}
+
+.dark .family-tree-node {
+  border: 2px solid #64592B;
+  background: #743014;
+}
+
+.dark .family-tree-node:hover {
+  border-color: #9D9167;
+  background: #8B4226;
+}
+
+.family-tree-connection {
+  stroke: #9D9167;
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+.family-tree-connection:hover {
+  stroke: #64592B;
+  stroke-width: 3;
+}
+
+.dark .family-tree-connection {
+  stroke: #64592B;
+}
+
+.dark .family-tree-connection:hover {
+  stroke: #9D9167;
+}
+
+/* Theme transition helper */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

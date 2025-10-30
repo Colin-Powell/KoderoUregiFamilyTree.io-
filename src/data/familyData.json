@@ -1,0 +1,760 @@
+[
+  {
+    "id": "root",
+    "name": "Kodero Family Legacy",
+    "generation": 0,
+    "nodeType": "root",
+    "children": ["couple_1", "couple_2"],
+    "bio": "Complete Kodero Family Lineage"
+  },
+  {
+    "id": "couple_1",
+    "name": "Chianja Family",
+    "generation": 1,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 2,
+        "name": "Phares Chianja",
+        "bio": "This senior Chief Pharez Chianja Onduru. He was the father to Sabina Kodero and worked as a senior chief of the republic of Tanzania until his retirement in 1994",
+        "profileImage": "/images/pherez.jpg",
+        "role": "Father"
+      },
+      {
+        "id": 3,
+        "name": "Doris Chianja Onduru",
+        "bio": "First woman to graduate high school in gwasii. And a wonderful primary teacher. Mother of Sabina Kodero",
+        "profileImage": "/images/mother-chianja.jpg",
+        "role": "Mother"
+      }
+    ],
+    "children": ["sabina_kodero"],
+    "bio": "Parents of Sabina Kodero"
+  },
+  {
+    "id": "couple_2",
+    "name": "Ezekiel Maswabe + Domtila Awuor",
+    "generation": 1,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 4,
+        "name": "Ezekiel Maswabe",
+        "bio": "Father of Augustine and Maebo",
+        "profileImage":"/images/maswabe.jpg",
+        "role": "Father"
+      },
+      {
+        "id": 5,
+        "name": "Domtila Awuor",
+        "bio": "Domtila Awuor Nyouko, also called Khadija. Was a powerful woman who was married into uregi by a young man called Odero Kerara. The head count was 30 cows. Highest at the time. This is because she was the only daughter of her dad. She was fierce and strong.Mother of Augustine and Maebo",
+        "role": "Mother"
+      }
+    ],
+    "children": ["augustine_kodero", "maebo_kodero"],
+    "bio": "Parents of Augustine and Maebo Odero"
+  },
+  {
+    "id": "augustine_kodero",
+    "name": "Augustine Kodero",
+    "generation": 2,
+    "birthDate": "1945",
+    "deathDate": "2020-10-07",
+    "nodeType": "person",
+    "children": ["couple_3", "couple_4", "couple_5", "couple_6"],
+    "bio": "Family patriarch with four wives",
+    "profileImage": "/images/augustine.jpg",
+    "additionalImages": [
+      "/images/augustine-young.jpg",
+      "/images/augustine-family.jpg"
+    ]
+  },
+  {
+    "id": "sabina_kodero",
+    "name": "Sabina Kodero",
+    "generation": 2,
+    "nodeType": "person",
+    "bio": "Daughter of Chianja family",
+    "profileImage": "/images/sabina.jpg"
+  },
+  {
+    "id": "maebo_kodero",
+    "name": "Maebo Kodero",
+    "generation": 2,
+    "deathDate": "2003-10-07",
+    "birthDate": "1945",
+    "nodeType": "person",
+    "children": ["couple_7"],
+    "bio": "Brother of Augustine Kodero",
+    "profileImage": "/images/maebo-kodero.jpg"
+  },
+  {
+    "id": "couple_3",
+    "name": "Augustine + Selina",
+    "generation": 3,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 6,
+        "name": "Augustine Kodero",
+        "bio": "Family patriarch with four wives",
+        "profileImage": "/images/augustine.jpg",
+        "birthDate": "1952",
+        "deathDate": "August 19th, 2022",
+        "role": "Husband"
+      },
+      {
+        "id": 100,
+        "name": "Selina Mabere",
+        "bio": "First wife of Augustine Kodero",
+        "profileImage": "/images/selina-mabere.jpg",
+        "role": "First Wife"
+      }
+    ],
+    "children": ["couple_8", "couple_9"],
+    "bio": "Augustine and his first wife Selina started their family journey together, building a legacy that would span generations."
+  },
+  {
+    "id": "couple_4",
+    "name": "Augustine + Sabina",
+    "generation": 3,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 6,
+        "name": "Augustine Kodero",
+        "bio": "Family patriarch with four wives",
+        "profileImage": "/images/augustine.jpg",
+        "birthDate": "1952",
+        "deathDate": "August 19th, 2022",
+        "role": "Husband"
+      },
+      {
+        "id": 200,
+        "name": "Sabina Kodero",
+        "bio": "Second wife of Augustine Kodero, daughter of Chianja family",
+        "profileImage": "/images/sabina.jpg",
+        "role": "Second Wife"
+      }
+    ],
+    "children": ["couple_10", "couple_11", "couple_12", "couple_13", "winnie_kodero", "mabere_kodero", "edwin_maswabe"],
+    "bio": "Augustine and Sabina continued the family lineage with their children, each carrying forward the Kodero heritage."
+  },
+  {
+    "id": "couple_5",
+    "name": "Augustine + Adda",
+    "generation": 3,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 6,
+        "name": "Augustine Kodero",
+        "bio": "Family patriarch with four wives",
+        "profileImage": "/images/augustine.jpg",
+        "birthDate": "1952",
+        "deathDate": "August 19th, 2022",
+        "role": "Husband"
+      },
+      {
+        "id": 300,
+        "name": "Adda Kodero",
+        "bio": "Third wife of Augustine Kodero",
+        "profileImage": "/images/adda-kodero.jpg",
+        "role": "Third Wife"
+      }
+    ],
+    "children": ["couple_14", "ken_kodero", "clin_kodero", "june_kodero"],
+    "bio": "Augustine and Adda contributed to the growing Kodero family with their own branch of descendants."
+  },
+  {
+    "id": "couple_6",
+    "name": "Augustine + Judith",
+    "generation": 3,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 6,
+        "name": "Augustine Kodero",
+        "bio": "Family patriarch with four wives",
+        "profileImage": "/images/augustine.jpg",
+        "birthDate": "1952",
+        "deathDate": "August 19th, 2022",
+        "role": "Husband"
+      },
+      {
+        "id": 400,
+        "name": "Judith Kodero",
+        "bio": "Fourth wife of Augustine Kodero",
+        "profileImage": "/images/judith-kodero.jpg",
+        "role": "Fourth Wife"
+      }
+    ],
+    "children": ["peninah_kodero", "felicia_kodero", "wesly_otiato"],
+    "bio": "Augustine and Judith completed the family circle with their children, each adding to the rich Kodero legacy."
+  },
+  {
+    "id": "couple_7",
+    "name": "Maebo + Julita",
+    "generation": 3,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 500,
+        "name": "Maebo Kodero",
+        "bio": "Brother of Augustine Kodero",
+        "profileImage": "/images/maebo-kodero.jpg",
+        "birthDate": "1945",
+        "deathDate": "August 19th, 2022",
+        "role": "Husband"
+      },
+      {
+        "id": 501,
+        "name": "Julita Odero",
+        "bio": "Wife of Maebo Kodero",
+        "profileImage":"/images/julita.jpg",
+        "role": "Wife"
+      }
+    ],
+    "children": ["couple_15", "couple_16"],
+    "bio": "Maebo and Julita built their own family branch, continuing the Kodero lineage through their children."
+  },
+  {
+    "id": "couple_8",
+    "name": "Ghati + John Ngeso",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 101,
+        "name": "Grace Ghati Kodero",
+        "bio": "Daughter of Selina Mabere",
+        "profileImage": "/images/ghati.jpg",
+        "role": "Wife"
+      },
+      {
+        "id": 102,
+        "name": "John Ngeso",
+        "bio": "Husband of Ghati Kodero",
+        "profileImage":"/images/john.jpg",
+        "role": "Husband"
+      }
+    ],
+    "children": ["donbosco_ngeso", "azel_ngeso", "rashell_austine", "eugine_ngeso", "wendy_ngeso", "angelica_ngeso"],
+    "bio": "Ghati and John Ngeso built a beautiful family together, raising six wonderful children."
+  },
+  {
+    "id": "couple_9",
+    "name": "Rosemary + Jared Omore",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 103,
+        "name": "Rosemary Abuso Kodero",
+        "bio": "Daughter of Selina Mabere",
+        "birthDate":"1975",
+        "profileImage": "/images/rosemary.jpg",
+        "role": "Wife"
+      },
+      {
+        "id": 104,
+        "name": "Jared Omore",
+        "bio": "Husband of Rosemary Kodero",
+        "profileImage":"/images/jared.jpg",
+        "role": "Husband"
+      }
+    ],
+    "children": ["beatrice_jared", "collins_powell", "samwell_jared", "janes_jared", "davis_jared"],
+    "bio": "Rosemary and Jared Omore created a loving home for their five children, each carrying forward the family values."
+  },
+  {
+    "id": "couple_10",
+    "name": "Bahati + Selina Kodero",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 201,
+        "name": "Bahati Moses Kodero",
+        "bio": "Son of Sabina Kodero, Doctor by profession",
+        "birthDate":"February 10, 1980",
+        "profileImage": "/images/Bahati.jpg",
+        "role": "Husband"
+      },
+      {
+        "id": 202,
+        "name": "Selina Andrew Kimaryo",
+        "bio": "Wife of Bahati Kodero, A nurse by profession",
+        "birthDate":"December 12, 1974",
+        "profileImage":"/images/selina.jpg",
+        "role": "Wife"
+      }
+    ],
+    "children": ["anna_moses", "arshavin_moses", "alvin_moses", "abel_moses"],
+    "bio": "Bahati and Selina continued the Kodero tradition of strong family bonds with their four children."
+  },
+  {
+    "id": "couple_11",
+    "name": "Rehema + Ken Jabuya",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 203,
+        "name": "Rehema Kodero",
+        "bio": "Sabina's Second born A grade, A mother of three. A nurse by profession A resident of Migori",
+        "profileImage": "/images/Rehema.jpg",
+        "role": "Wife"
+      },
+      {
+        "id": 204,
+        "name": "Ken Jabuya",
+        "bio": "Husband of Rehema Kodero",
+        "profileImage":"/images/Ken.jpg",
+        "role": "Husband"
+      }
+    ],
+    "children": ["bilha_jabuya", "benny_jabuya", "dosantos_oyucho"],
+    "bio": "Rehema and Ken Jabuya built a life together focused on education, healthcare, and family values."
+  },
+  {
+    "id": "couple_12",
+    "name": "Ubbah + Alice Kodero",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 205,
+        "name": "Ubbah Kodero",
+        "bio": "Son of Sabina Kodero",
+        "profileImage": "/images/ubbah.jpg",
+        "role": "Husband"
+      },
+      {
+        "id": 206,
+        "name": "Alice Kodero",
+        "bio": "Wife of Ubbah Kodero",
+        "profileImage":"/images/alice.jpg",
+        "role": "Wife"
+      }
+    ],
+    "children": ["sabina_ishimwe", "samara_hodari", "banzubaze_augustino"],
+    "bio": "Ubbah and Alice Kodero raised three children, instilling in them the importance of family heritage."
+  },
+  {
+    "id": "couple_13",
+    "name": "Easter + Jerome Huale",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 207,
+        "name": "Easter Kodero",
+        "bio": "Daughter of Sabina Kodero",
+        "profileImage": "/images/easter-kodero.jpg",
+        "role": "Wife"
+      },
+      {
+        "id": 208,
+        "name": "Jerome Huale",
+        "bio": "Husband of Easter Kodero",
+        "role": "Husband"
+      }
+    ],
+    "children": ["yanje_huale"],
+    "bio": "Easter and Jerome Huale welcomed their child Yanje, continuing the family's next generation."
+  },
+  {
+    "id": "couple_14",
+    "name": "Brian + Spouse",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 301,
+        "name": "Brian Kodero",
+        "bio": "Son of Adda Kodero",
+        "profileImage": "/images/brian-kodero.jpg",
+        "role": "Husband"
+      },
+      {
+        "id": 302,
+        "name": "Unknown Spouse",
+        "bio": "Spouse of Brian Kodero",
+        "role": "Wife"
+      }
+    ],
+    "children": ["brian_jr", "brian_child"],
+    "bio": "Brian and his spouse are raising the next generation of Koderos with two children."
+  },
+  {
+    "id": "couple_15",
+    "name": "Nicholas + Dina",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 502,
+        "name": "Nicholas Ochola Maebo",
+        "birthDate":"April, 1994",
+        "bio": "Son of Julita and Maebo Odero",
+        "profileImage": "/images/ochola.jpg",
+        "role": "Husband"
+      },
+      {
+        "id": 503,
+        "name": "Dina Boke Maebo",
+        "bio": "Wife of Nicholas Odero",
+        "profileImage":"/images/dina.jpg",
+        "role": "Wife"
+      }
+    ],
+    "children": ["james_ochola"],
+    "bio": "Nicholas and Dina are proud parents of James, carrying forward the Odero family name."
+  },
+  {
+    "id": "couple_16",
+    "name": "Sheilah Aoko + Spouse",
+    "generation": 4,
+    "nodeType": "family-unit",
+    "spouses": [
+      {
+        "id": 504,
+        "name": "Sheilah Aoko Biko",
+        "bio": "Daughter of Julita and Maebo Odero, Currently married to Steve Biko Orang'a",
+        "birthDate":"1988",
+        "profileImage": "/images/Mercello.jpg",
+        "role": "Wife"
+      },
+      {
+        "id": 505,
+        "name": "Steve Biko Orang'a",
+        "bio": "Spouse of Sheillah Aoko",
+        "role": "Husband"
+      }
+    ],
+    "children": ["lavender_odero", "beyonce_odero", "cliff_odero", "child4_odero", "lastborn_odero"],
+    "bio": "Marcella and her spouse have built a large and loving family with five children."
+  },
+  {
+    "id": "winnie_kodero",
+    "name": "Winnie Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Daughter of Sabina Kodero",
+    "profileImage": "/images/winnie-kodero.jpg"
+  },
+  {
+    "id": "mabere_kodero",
+    "name": "Mabere Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Son of Sabina Kodero",
+    "profileImage": "/images/mabere-kodero.jpg"
+  },
+  {
+    "id": "edwin_maswabe",
+    "name": "Edwin Maswabe",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Son of Sabina Kodero",
+    "profileImage": "/images/edwin.jpg"
+  },
+  {
+    "id": "ken_kodero",
+    "name": "Ken Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Son of Adda Kodero",
+    "profileImage": "/images/ken-kodero.jpg"
+  },
+  {
+    "id": "clin_kodero",
+    "name": "Clin Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Son of Adda Kodero",
+    "profileImage": "/images/clin-kodero.jpg"
+  },
+  {
+    "id": "june_kodero",
+    "name": "June Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Daughter of Adda Kodero",
+    "profileImage": "/images/june-kodero.jpg"
+  },
+  {
+    "id": "peninah_kodero",
+    "name": "Peninah Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Daughter of Judith Kodero",
+    "profileImage": "/images/nina.jpg"
+  },
+  {
+    "id": "felicia_kodero",
+    "name": "Felicia Kodero",
+    "generation": 4,
+    "nodeType": "person",
+    "bio": "Daughter of Judith Kodero",
+    "profileImage": "/images/felicia.jpg"
+  },
+  {
+    "id": "wesly_otiato",
+    "name": "Wesly Otiato",
+    "generation": 4,
+    "birthDate": "2022",
+    "nodeType": "person",
+    "bio": "Son of Judith Kodero",
+    "profileImage": "/images/wesly.jpg"
+  },
+  {
+    "id": "anna_moses",
+    "name": "Anna Sabina Moses",
+    "generation": 5,
+    "nodeType": "person",
+    "birthDate": "2000-05-23",
+    "bio": "Sales Manager",
+    "profileImage": "/images/anna.jpg"
+  },
+  {
+    "id": "arshavin_moses",
+    "name": "Arshavin Marende Moses",
+    "generation": 5,
+    "nodeType": "person",
+    "birthDate": "2010-10-26",
+    "bio": "Son of Bahati Kodero",
+    "profileImage": "/images/arshavin.jpg"
+  },
+  {
+    "id": "alvin_moses",
+    "name": "Alvin Chianja Moses",
+    "generation": 5,
+    "nodeType": "person",
+    "birthDate": "2018-06-20",
+    "bio": "Son of Bahati Kodero",
+    "profileImage": "/images/alvin.jpg"
+  },
+  {
+    "id": "abel_moses",
+    "name": "Abel Saika Mosse",
+    "generation": 5,
+    "nodeType": "person",
+    "birthDate": "2014-02-25",
+    "bio": "Son of Bahati Kodero",
+    "profileImage": "/images/abel.jpg"
+  },
+  {
+    "id": "bilha_jabuya",
+    "name": "Bilha Blessed Jabuya",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Rehema's second born, A grade three student at gold fields academy. She's also a passionate singer.",
+    "profileImage": "/images/Bilha.jpg"
+  },
+  {
+    "id": "benny_jabuya",
+    "name": "Benny Bildad Jabuya",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Rehema's third born and also the last born in the family. A PP2 student at The Pentagon Academy",
+    "profileImage": "/images/Benny.jpg"
+  },
+  {
+    "id": "dosantos_oyucho",
+    "name": "Dosantos Oyucho",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Odiwuor Dosantos Oyucho (Sammy) First born son of Rehema Awuor. First male grandson of Sabina A student of The University of Nairobi. Studying Political science",
+    "profileImage": "/images/Dosantos.jpg"
+  },
+  {
+    "id": "sabina_ishimwe",
+    "name": "Sabina Ishimwe Kodero",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Daughter of Ubbah Kodero",
+    "profileImage": "/images/sabina1.jpg"
+  },
+  {
+    "id": "samara_hodari",
+    "name": "Samara Hodari Kodero",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ubbah Kodero",
+    "profileImage": "/images/samara.jpg"
+  },
+  {
+    "id": "banzubaze_augustino",
+    "name": "Banzubaze Augustino Kodero",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Ubbah Kodero",
+    "profileImage": "/images/benzo.jpg"
+  },
+  {
+    "id": "yanje_huale",
+    "name": "Yanje Huale",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Easter Kodero",
+    "profileImage": "/images/yanje-huale.jpg"
+  },
+  {
+    "id": "brian_jr",
+    "name": "Brian Jr",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Brian Kodero",
+    "profileImage": "/images/brian-jr.jpg"
+  },
+  {
+    "id": "brian_child",
+    "name": "Brian's Child",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Brian Kodero",
+    "profileImage": "/images/brian-child.jpg"
+  },
+  {
+    "id": "james_ochola",
+    "name": "James Ochola",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Nicholas Odero",
+    "profileImage": "/images/james-ochola.jpg"
+  },
+  {
+    "id": "lavender_odero",
+    "name": "Lavender Sheryl Biko",
+    "birthDate":"January 4, 2006",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Daughter of Sheila Aoko",
+    "profileImage": "/images/lavender.jpg"
+  },
+  {
+    "id": "beyonce_odero",
+    "name": "Beyonce Biko",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Daughter of Marcella Odero",
+    "profileImage": "/images/beyonce.jpg"
+  },
+  {
+    "id": "cliff_odero",
+    "name": "Ubber Kodero Biko",
+    "birthDate":"July 17, 2024",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Sheilla Aoko",
+    "profileImage": "/images/ubber.jpg"
+  },
+  {
+    "id": "child4_odero",
+    "name": "Daizy Nerill Biko",
+    "generation": 5,
+    "nodeType": "person",
+    "birthDate":"September 23, 2019",
+    "bio": "Daughter of Sheila Aoko",
+    "profileImage": "/images/Daizy.jpg"
+  },
+  {
+    "id": "lastborn_odero",
+    "name": "Kelly Kodero Biko",
+    "birthDate":"May 16, 2016",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Sheilla Aoko",
+    "profileImage": "/images/Kelly.jpg"
+  },
+  {
+    "id": "donbosco_ngeso",
+    "name": "Donbosco Ngeso",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Ghati Kodero",
+    "profileImage": "/images/bosco.jpg"
+  },
+  {
+    "id": "azel_ngeso",
+    "name": "Azel Ngeso",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ghati Kodero",
+    "profileImage": "/images/azel-ngeso.jpg"
+  },
+  {
+    "id": "rashell_austine",
+    "name": "Rashell Austine",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ghati Kodero",
+    "profileImage": "/images/rashell.jpg"
+  },
+  {
+    "id": "eugine_ngeso",
+    "name": "Eugine Ngeso",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ghati Kodero",
+    "profileImage": "/images/eugine-ngeso.jpg"
+  },
+  {
+    "id": "wendy_ngeso",
+    "name": "Wendy Ngeso",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ghati Kodero",
+    "profileImage": "/images/wendy-ngeso.jpg"
+  },
+  {
+    "id": "angelica_ngeso",
+    "name": "Angelica Ngeso",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Ghati Kodero",
+    "profileImage": "/images/angelica-ngeso.jpg"
+  },
+  {
+    "id": "beatrice_jared",
+    "name": "Beatrice Jared",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Daughter of Rosemary",
+    "profileImage": "/images/biti.jpg"
+  },
+  {
+    "id": "collins_powell",
+    "name": "Collins Powell",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Rosemary",
+    "profileImage": "/images/collins-powell.jpg"
+  },
+  {
+    "id": "samwell_jared",
+    "name": "Samwell Jared",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Rosemary",
+    "profileImage": "/images/samwel.jpg"
+  },
+  {
+    "id": "janes_jared",
+    "name": "Janes Jared",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Child of Rosemary",
+    "profileImage": "/images/janes.jpg"
+  },
+  {
+    "id": "davis_jared",
+    "name": "Davis Jared",
+    "generation": 5,
+    "nodeType": "person",
+    "bio": "Son of Rosemary",
+    "profileImage": "/images/davis.jpg"
+  }
+]
