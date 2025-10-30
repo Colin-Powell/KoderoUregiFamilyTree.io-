@@ -7,8 +7,8 @@ import { toPng } from 'html-to-image';
 const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
   const treeContainerRef = useRef();
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
-  const [scale, setScale] = useState(0.5);
-  const [zoomLevel, setZoomLevel] = useState(0.5);
+  const [scale, setScale] = useState(0.4);
+  const [zoomLevel, setZoomLevel] = useState(0.4);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [windowSize, setWindowSize] = useState({
@@ -50,27 +50,27 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
       setWindowSize({ width, height });
       
       // Responsive container height calculation - increased for deeper trees
-      const calculatedHeight = Math.max(800, height * 0.9); // Minimum 800px, 90% of viewport height
+      const calculatedHeight = Math.max(1000, height * 0.95); // Increased minimum height
       setContainerHeight(calculatedHeight);
       
       const translateX = width / 2;
-      const translateY = calculatedHeight / 6; // Start higher to accommodate more generations
+      const translateY = calculatedHeight / 4; // Start higher to accommodate larger cards
       
       setTranslate({
         x: translateX,
         y: translateY
       });
 
-      // Responsive scaling
+      // Reduced initial scale to fit larger cards
       let newScale;
       if (width < 640) { // Mobile
-        newScale = 0.3;
+        newScale = 0.25;
       } else if (width < 768) { // Small tablet
-        newScale = 0.35;
+        newScale = 0.3;
       } else if (width < 1024) { // Tablet
-        newScale = 0.4;
+        newScale = 0.35;
       } else { // Desktop
-        newScale = 0.45;
+        newScale = 0.4;
       }
       setScale(newScale);
       setZoomLevel(newScale);
@@ -169,17 +169,17 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
 
   const resetView = useCallback(() => {
     const translateX = windowSize.width / 2;
-    const translateY = containerHeight / 6;
+    const translateY = containerHeight / 4;
     
     let newScale;
     if (windowSize.width < 640) {
-      newScale = 0.3;
+      newScale = 0.25;
     } else if (windowSize.width < 768) {
-      newScale = 0.35;
+      newScale = 0.3;
     } else if (windowSize.width < 1024) {
-      newScale = 0.4;
+      newScale = 0.35;
     } else {
-      newScale = 0.45;
+      newScale = 0.4;
     }
     
     setTranslate({
@@ -192,7 +192,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
 
   const zoomIn = useCallback(() => {
     setScale(prev => {
-      const newScale = Math.min(prev + 0.1, 2); // Reduced increment for better control
+      const newScale = Math.min(prev + 0.1, 2);
       setZoomLevel(newScale);
       return newScale;
     });
@@ -264,26 +264,27 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
     const isMobile = windowSize.width < 640;
     const isTablet = windowSize.width < 1024;
     
-    // Responsive card dimensions - smaller for deeper generations
+    // MAXIMUM CARD DIMENSIONS - PUSHING THE LIMITS
     const cardWidth = isRoot 
-      ? (isMobile ? 160 : isTablet ? 200 : 240)
+      ? (isMobile ? 280 : isTablet ? 350 : 400) // MAXIMUM SIZE
       : isFamilyUnit 
-        ? (isMobile ? 250 : isTablet ? 300 : 350)
+        ? (isMobile ? 400 : isTablet ? 500 : 600) // MAXIMUM SIZE
         : isAugustine 
-          ? (isMobile ? 160 : isTablet ? 200 : 220)
-          : (isMobile ? 120 : isTablet ? 150 : 180);
+          ? (isMobile ? 280 : isTablet ? 350 : 400) // MAXIMUM SIZE
+          : (isMobile ? 220 : isTablet ? 280 : 320); // MAXIMUM SIZE
 
     const cardHeight = isRoot 
-      ? (isMobile ? 60 : isTablet ? 80 : 100)
+      ? (isMobile ? 120 : isTablet ? 150 : 180) // MAXIMUM SIZE
       : isFamilyUnit 
-        ? (isMobile ? 60 : isTablet ? 70 : 80)
+        ? (isMobile ? 120 : isTablet ? 140 : 160) // MAXIMUM SIZE
         : isAugustine 
-          ? (isMobile ? 70 : isTablet ? 90 : 110)
-          : (isMobile ? 80 : isTablet ? 100 : 120);
+          ? (isMobile ? 160 : isTablet ? 200 : 240) // MAXIMUM SIZE
+          : (isMobile ? 180 : isTablet ? 220 : 260); // MAXIMUM SIZE
 
-    const fontSize = isMobile ? '8' : isTablet ? '10' : '12';
-    const smallFontSize = isMobile ? '6' : isTablet ? '8' : '9';
-    const titleFontSize = isMobile ? '10' : isTablet ? '14' : '16';
+    // MAXIMUM FONT SIZES
+    const fontSize = isMobile ? '12' : isTablet ? '14' : '16';
+    const smallFontSize = isMobile ? '10' : isTablet ? '12' : '13';
+    const titleFontSize = isMobile ? '14' : isTablet ? '18' : '20';
 
     if (isRoot) {
       return (
@@ -300,26 +301,26 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
             rx={0}
             fill={generationColors.dark}
             stroke={generationColors.light}
-            strokeWidth={isMobile ? 2 : 3}
+            strokeWidth={isMobile ? 3 : 4}
             className="shadow-2xl"
           />
           
           <rect
-            x={-cardWidth / 2 + (isMobile ? 4 : 6)}
-            y={-cardHeight / 2 + (isMobile ? 4 : 6)}
-            width={cardWidth - (isMobile ? 8 : 12)}
-            height={cardHeight - (isMobile ? 8 : 12)}
+            x={-cardWidth / 2 + (isMobile ? 6 : 8)}
+            y={-cardHeight / 2 + (isMobile ? 6 : 8)}
+            width={cardWidth - (isMobile ? 12 : 16)}
+            height={cardHeight - (isMobile ? 12 : 16)}
             rx={0}
             fill="none"
             stroke={generationColors.light}
-            strokeWidth={isMobile ? 1 : 2}
+            strokeWidth={isMobile ? 2 : 3}
             opacity={0.6}
           />
 
           <text
             fill={generationColors.light}
             x="0"
-            y={isMobile ? -8 : -15}
+            y={isMobile ? -15 : -20}
             textAnchor="middle"
             fontSize={titleFontSize}
             fontFamily="Expletus Sans, serif"
@@ -332,7 +333,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
             x="0"
             y={isMobile ? 5 : 10}
             textAnchor="middle"
-            fontSize={isMobile ? "7" : "10"}
+            fontSize={isMobile ? "11" : "14"}
             fontFamily="Sedan, sans-serif"
             fontWeight="500"
           >
@@ -341,9 +342,9 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           <text
             fill={generationColors.light}
             x="0"
-            y={isMobile ? 18 : 30}
+            y={isMobile ? 25 : 35}
             textAnchor="middle"
-            fontSize={isMobile ? "6" : "9"}
+            fontSize={isMobile ? "10" : "12"}
             fontFamily="Sedan, sans-serif"
             fontWeight="400"
           >
@@ -351,10 +352,10 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           </text>
           
           <Crown 
-            size={isMobile ? 12 : 16}
+            size={isMobile ? 18 : 22}
             color={generationColors.light}
-            x={-cardWidth / 2 + (isMobile ? 8 : 12)} 
-            y={-cardHeight / 2 + (isMobile ? 8 : 12)}
+            x={-cardWidth / 2 + (isMobile ? 12 : 16)} 
+            y={-cardHeight / 2 + (isMobile ? 12 : 16)}
           />
         </motion.g>
       );
@@ -364,7 +365,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
       const spouses = nodeDatum.spouses || [];
       const spouse1 = spouses[0] || {};
       const spouse2 = spouses[1] || {};
-      const spouseWidth = isMobile ? 80 : isTablet ? 90 : 100;
+      const spouseWidth = isMobile ? 140 : isTablet ? 180 : 200;
       
       return (
         <motion.g
@@ -376,7 +377,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           transition={{ duration: 0.3 }}
         >
           {/* Spouse 1 Card - Left */}
-          <g transform={`translate(${-spouseWidth - 10}, 0)`}>
+          <g transform={`translate(${-spouseWidth - 20}, 0)`}>
             <rect
               x={-spouseWidth / 2}
               y={-cardHeight / 2}
@@ -385,37 +386,37 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
               rx={0}
               fill={currentColors.card}
               stroke={generationColors.dark}
-              strokeWidth={2}
+              strokeWidth={3}
               className="shadow-xl"
             />
             <rect
-              x={-spouseWidth / 2 + 3}
-              y={-cardHeight / 2 + 3}
-              width={spouseWidth - 6}
-              height={cardHeight - 6}
+              x={-spouseWidth / 2 + 4}
+              y={-cardHeight / 2 + 4}
+              width={spouseWidth - 8}
+              height={cardHeight - 8}
               rx={0}
               fill="none"
               stroke={generationColors.dark}
-              strokeWidth={1}
+              strokeWidth={2}
               opacity={0.3}
             />
             <text
               fill={currentColors.text}
               x="0"
-              y={-10}
+              y={-15}
               textAnchor="middle"
               fontSize={fontSize}
               fontFamily="Expletus Sans, serif"
               fontWeight="600"
             >
-              {spouse1.name && spouse1.name.length > (isMobile ? 6 : 8) 
-                ? spouse1.name.substring(0, isMobile ? 6 : 8) + '...' 
+              {spouse1.name && spouse1.name.length > (isMobile ? 10 : 14)
+                ? spouse1.name.substring(0, isMobile ? 10 : 14) + '...' 
                 : spouse1.name || 'Spouse 1'}
             </text>
             <text
               fill={currentColors.textLight}
               x="0"
-              y={2}
+              y={5}
               textAnchor="middle"
               fontSize={smallFontSize}
               fontFamily="Sedan, sans-serif"
@@ -426,7 +427,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           </g>
 
           {/* Spouse 2 Card - Right */}
-          <g transform={`translate(${spouseWidth + 10}, 0)`}>
+          <g transform={`translate(${spouseWidth + 20}, 0)`}>
             <rect
               x={-spouseWidth / 2}
               y={-cardHeight / 2}
@@ -435,37 +436,37 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
               rx={0}
               fill={currentColors.card}
               stroke={generationColors.dark}
-              strokeWidth={2}
+              strokeWidth={3}
               className="shadow-xl"
             />
             <rect
-              x={-spouseWidth / 2 + 3}
-              y={-cardHeight / 2 + 3}
-              width={spouseWidth - 6}
-              height={cardHeight - 6}
+              x={-spouseWidth / 2 + 4}
+              y={-cardHeight / 2 + 4}
+              width={spouseWidth - 8}
+              height={cardHeight - 8}
               rx={0}
               fill="none"
               stroke={generationColors.dark}
-              strokeWidth={1}
+              strokeWidth={2}
               opacity={0.3}
             />
             <text
               fill={currentColors.text}
               x="0"
-              y={-10}
+              y={-15}
               textAnchor="middle"
               fontSize={fontSize}
               fontFamily="Expletus Sans, serif"
               fontWeight="600"
             >
-              {spouse2.name && spouse2.name.length > (isMobile ? 6 : 8) 
-                ? spouse2.name.substring(0, isMobile ? 6 : 8) + '...' 
+              {spouse2.name && spouse2.name.length > (isMobile ? 10 : 14)
+                ? spouse2.name.substring(0, isMobile ? 10 : 14) + '...' 
                 : spouse2.name || 'Spouse 2'}
             </text>
             <text
               fill={currentColors.textLight}
               x="0"
-              y={2}
+              y={5}
               textAnchor="middle"
               fontSize={smallFontSize}
               fontFamily="Sedan, sans-serif"
@@ -482,16 +483,16 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
             y1={0}
             y2={0}
             stroke={currentColors.primary}
-            strokeWidth={2}
+            strokeWidth={3}
           />
 
           {/* Heart Icon in Center */}
           <Heart 
-            size={isMobile ? 10 : 12}
+            size={isMobile ? 16 : 20}
             color={currentColors.accent}
             fill={currentColors.accent}
-            x={-5} 
-            y={-5}
+            x={-8}
+            y={-8}
           />
 
           {/* Vertical line for children connection */}
@@ -500,9 +501,9 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
               x1={0}
               x2={0}
               y1={cardHeight / 2}
-              y2={cardHeight / 2 + 15}
+              y2={cardHeight / 2 + 20}
               stroke={currentColors.primary}
-              strokeWidth={2}
+              strokeWidth={3}
             />
           )}
         </motion.g>
@@ -511,7 +512,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
 
     return (
       <motion.g
-        whileHover={{ scale: isMobile ? 1.03 : 1.05, y: isMobile ? -1 : -2 }}
+        whileHover={{ scale: isMobile ? 1.03 : 1.05, y: isMobile ? -2 : -3 }}
         whileTap={{ scale: 0.98 }}
         onClick={() => handleNodeClick(nodeDatum)}
         className="cursor-pointer"
@@ -527,72 +528,72 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           rx={0}
           fill={currentColors.card}
           stroke={isAugustine ? currentColors.primary : generationColors.dark}
-          strokeWidth={isAugustine ? (isMobile ? 3 : 4) : (isMobile ? 2 : 3)}
+          strokeWidth={isAugustine ? (isMobile ? 4 : 5) : (isMobile ? 3 : 4)}
           className="shadow-xl"
         />
 
         <rect
-          x={-cardWidth / 2 + (isMobile ? 2 : 3)}
-          y={-cardHeight / 2 + (isMobile ? 2 : 3)}
-          width={cardWidth - (isMobile ? 4 : 6)}
-          height={cardHeight - (isMobile ? 4 : 6)}
+          x={-cardWidth / 2 + (isMobile ? 3 : 4)}
+          y={-cardHeight / 2 + (isMobile ? 3 : 4)}
+          width={cardWidth - (isMobile ? 6 : 8)}
+          height={cardHeight - (isMobile ? 6 : 8)}
           rx={0}
           fill="none"
           stroke={isAugustine ? currentColors.primary : generationColors.dark}
-          strokeWidth={1}
+          strokeWidth={2}
           opacity={0.3}
         />
 
-        {/* Avatar Section */}
+        {/* Avatar Section - MAXIMUM SIZE */}
         <rect
-          x={-cardWidth / 2 + (isMobile ? 6 : 8)}
-          y={-cardHeight / 2 + (isMobile ? 6 : 8)}
-          width={isMobile ? 25 : 35}
-          height={isMobile ? 25 : 35}
+          x={-cardWidth / 2 + (isMobile ? 12 : 16)}
+          y={-cardHeight / 2 + (isMobile ? 12 : 16)}
+          width={isMobile ? 45 : 60}
+          height={isMobile ? 45 : 60}
           rx={0}
           fill={isAugustine ? currentColors.primary : currentColors.secondary}
           stroke={currentColors.card}
-          strokeWidth={isMobile ? 1 : 2}
+          strokeWidth={isMobile ? 2 : 3}
         />
         
         <User 
-          size={isMobile ? 10 : 16}
+          size={isMobile ? 18 : 24}
           color="white" 
-          x={-cardWidth / 2 + (isMobile ? 11 : 15)} 
-          y={-cardHeight / 2 + (isMobile ? 11 : 15)}
+          x={-cardWidth / 2 + (isMobile ? 22 : 30)}
+          y={-cardHeight / 2 + (isMobile ? 22 : 30)}
         />
 
-        {/* Name */}
+        {/* Name - MAXIMUM VISIBILITY */}
         <text
-          x={-cardWidth / 2 + (isMobile ? 35 : 50)}
-          y={-cardHeight / 2 + (isMobile ? 15 : 22)}
+          x={-cardWidth / 2 + (isMobile ? 70 : 90)}
+          y={-cardHeight / 2 + (isMobile ? 28 : 38)}
           fill={currentColors.text}
           fontSize={fontSize}
           fontFamily="Expletus Sans, serif"
           fontWeight="700"
         >
-          {nodeDatum.name && nodeDatum.name.length > (isMobile ? 6 : 10) 
-            ? nodeDatum.name.substring(0, isMobile ? 6 : 10) + '...' 
+          {nodeDatum.name && nodeDatum.name.length > (isMobile ? 12 : 16)
+            ? nodeDatum.name.substring(0, isMobile ? 12 : 16) + '...' 
             : nodeDatum.name}
         </text>
 
-        {/* Generation Badge */}
+        {/* Generation Badge - LARGER */}
         <rect
-          x={cardWidth / 2 - (isMobile ? 14 : 20)}
-          y={-cardHeight / 2 + (isMobile ? 6 : 8)}
-          width={isMobile ? 12 : 18}
-          height={isMobile ? 12 : 18}
+          x={cardWidth / 2 - (isMobile ? 22 : 30)}
+          y={-cardHeight / 2 + (isMobile ? 12 : 16)}
+          width={isMobile ? 20 : 28}
+          height={isMobile ? 20 : 28}
           rx={0}
           fill={isAugustine ? currentColors.primary : generationColors.dark}
           stroke={generationColors.light}
-          strokeWidth={isMobile ? 1 : 2}
+          strokeWidth={isMobile ? 2 : 3}
         />
         <text
-          x={cardWidth / 2 - (isMobile ? 8 : 11)}
-          y={-cardHeight / 2 + (isMobile ? 14 : 19)}
+          x={cardWidth / 2 - (isMobile ? 12 : 16)}
+          y={-cardHeight / 2 + (isMobile ? 24 : 32)}
           textAnchor="middle"
           fill="white"
-          fontSize={isMobile ? "6" : "8"}
+          fontSize={isMobile ? "10" : "12"}
           fontFamily="Expletus Sans, serif"
           fontWeight="700"
         >
@@ -601,8 +602,8 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
 
         {/* Role/Status */}
         <text
-          x={-cardWidth / 2 + (isMobile ? 35 : 50)}
-          y={-cardHeight / 2 + (isMobile ? 28 : 40)}
+          x={-cardWidth / 2 + (isMobile ? 70 : 90)}
+          y={-cardHeight / 2 + (isMobile ? 48 : 65)}
           fill={currentColors.textLight}
           fontSize={smallFontSize}
           fontFamily="Sedan, sans-serif"
@@ -613,40 +614,40 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
 
         {/* Separator Line */}
         <line
-          x1={-cardWidth / 2 + (isMobile ? 6 : 8)}
-          x2={cardWidth / 2 - (isMobile ? 6 : 8)}
-          y1={-cardHeight / 2 + (isMobile ? 45 : 60)}
-          y2={-cardHeight / 2 + (isMobile ? 45 : 60)}
+          x1={-cardWidth / 2 + (isMobile ? 12 : 16)}
+          x2={cardWidth / 2 - (isMobile ? 12 : 16)}
+          y1={-cardHeight / 2 + (isMobile ? 75 : 100)}
+          y2={-cardHeight / 2 + (isMobile ? 75 : 100)}
           stroke={currentColors.border}
-          strokeWidth={1}
+          strokeWidth={2}
           opacity={0.5}
         />
 
-        {/* Children Count */}
+        {/* Children Count - LARGER */}
         {hasChildren && (
           <>
             <rect
-              x={-cardWidth / 2 + (isMobile ? 6 : 8)}
-              y={cardHeight / 2 - (isMobile ? 18 : 25)}
-              width={isMobile ? 12 : 16}
-              height={isMobile ? 12 : 16}
+              x={-cardWidth / 2 + (isMobile ? 12 : 16)}
+              y={cardHeight / 2 - (isMobile ? 35 : 45)}
+              width={isMobile ? 20 : 26}
+              height={isMobile ? 20 : 26}
               rx={0}
               fill={currentColors.primary}
             />
             <text
-              x={-cardWidth / 2 + (isMobile ? 12 : 16)}
-              y={cardHeight / 2 - (isMobile ? 9 : 13)}
+              x={-cardWidth / 2 + (isMobile ? 22 : 29)}
+              y={cardHeight / 2 - (isMobile ? 20 : 27)}
               textAnchor="middle"
               fill="white"
-              fontSize={isMobile ? "6" : "8"}
+              fontSize={isMobile ? "10" : "12"}
               fontFamily="Expletus Sans, serif"
               fontWeight="700"
             >
               {nodeDatum.children.length}
             </text>
             <text
-              x={-cardWidth / 2 + (isMobile ? 28 : 38)}
-              y={cardHeight / 2 - (isMobile ? 9 : 13)}
+              x={-cardWidth / 2 + (isMobile ? 50 : 65)}
+              y={cardHeight / 2 - (isMobile ? 20 : 27)}
               fill={currentColors.textLight}
               fontSize={smallFontSize}
               fontFamily="Sedan, sans-serif"
@@ -657,21 +658,21 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           </>
         )}
 
-        {/* Crown for Augustine */}
+        {/* Crown for Augustine - LARGER */}
         {isAugustine && (
           <Crown 
-            size={isMobile ? 8 : 12}
+            size={isMobile ? 14 : 18}
             color={currentColors.primary}
             fill={currentColors.primary}
-            x={cardWidth / 2 - (isMobile ? 28 : 40)} 
-            y={cardHeight / 2 - (isMobile ? 18 : 25)}
+            x={cardWidth / 2 - (isMobile ? 45 : 60)}
+            y={cardHeight / 2 - (isMobile ? 35 : 45)}
           />
         )}
 
         {/* Bottom Text */}
         <text
           x={0}
-          y={cardHeight / 2 - (isMobile ? 2 : 5)}
+          y={cardHeight / 2 - (isMobile ? 8 : 15)}
           textAnchor="middle"
           fill={currentColors.textLight}
           fontSize={smallFontSize}
@@ -827,7 +828,7 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
         transition={{ duration: 0.5 }} 
-        className="relative w-full border-2 overflow-auto" // Changed to overflow-auto
+        className="relative w-full border-2 overflow-auto"
         style={{ 
           height: `${containerHeight}px`,
           backgroundColor: currentColors.card, 
@@ -844,29 +845,29 @@ const FamilyTree = ({ data, onMemberSelect, searchTerm, darkMode, colors }) => {
           scale={scale}
           renderCustomNodeElement={renderCustomNodeElement}
           separation={{ 
-            siblings: windowSize.width < 640 ? 1.0 : windowSize.width < 768 ? 1.2 : 1.5, 
-            nonSiblings: windowSize.width < 640 ? 1.2 : windowSize.width < 768 ? 1.5 : 2.0 
+            siblings: windowSize.width < 640 ? 1.5 : windowSize.width < 768 ? 2.0 : 2.5,
+            nonSiblings: windowSize.width < 640 ? 2.0 : windowSize.width < 768 ? 2.5 : 3.0
           }}
           pathClassFunc={() => `stroke-2`}
           pathFunc={customPathFunc}
           zoom={0.3}
           draggable
           collapsible={false}
-          depthFactor={windowSize.width < 640 ? 250 : windowSize.width < 768 ? 350 : windowSize.width < 1024 ? 450 : 550}
+          depthFactor={windowSize.width < 640 ? 400 : windowSize.width < 768 ? 500 : windowSize.width < 1024 ? 600 : 700}
           nodeSize={{ 
-            x: windowSize.width < 640 ? 140 : windowSize.width < 768 ? 180 : windowSize.width < 1024 ? 220 : 260, 
-            y: windowSize.width < 640 ? 120 : windowSize.width < 768 ? 150 : windowSize.width < 1024 ? 180 : 220 
+            x: windowSize.width < 640 ? 250 : windowSize.width < 768 ? 300 : windowSize.width < 1024 ? 350 : 400,
+            y: windowSize.width < 640 ? 220 : windowSize.width < 768 ? 280 : windowSize.width < 1024 ? 320 : 380
           }}
-          initialDepth={10} // Increased to show all generations
+          initialDepth={10}
           enableLegacyTransitions
           transitionDuration={500}
           styles={{ 
             links: { 
               stroke: currentColors.primary, 
-              strokeWidth: windowSize.width < 640 ? 1.5 : windowSize.width < 768 ? 2 : 2.5 
+              strokeWidth: windowSize.width < 640 ? 2 : windowSize.width < 768 ? 2.5 : 3
             } 
           }}
-          shouldCollapseNeighborNodes={false} // Prevent automatic collapsing
+          shouldCollapseNeighborNodes={false}
         />
       </motion.div>
     </div>

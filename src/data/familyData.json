@@ -47,7 +47,7 @@
       {
         "id": 5,
         "name": "Domtila Awuor",
-        "bio": "Domtila Awuor Nyouko, also called Khadija. Was a powerful woman who was married into uregi by a young man called Odero Kerara. The head count was 30 cows. Highest at the time. This is because she was the only daughter of her dad. She was fierce and strong.Mother of Augustine and Maebo",
+        "bio": "Domtila Awuor Nyouko, also called Khadija. Was a powerful woman who was married into uregi by a young man called Odero Kerara. The head count was 30 cows. Highest at the time. This is because she was the only  her dad. She was fierce and strong.Mother of Augustine and Maebo",
         "role": "Mother"
       }
     ],
@@ -74,7 +74,7 @@
     "name": "Sabina Kodero",
     "generation": 2,
     "nodeType": "person",
-    "bio": "Daughter of Chianja family",
+    "bio": " Chianja family",
     "profileImage": "/images/sabina.jpg"
   },
   {
@@ -132,7 +132,7 @@
       {
         "id": 200,
         "name": "Sabina Kodero",
-        "bio": "Second wife of Augustine Kodero, daughter of Chianja family",
+        "bio": "Second wife of Augustine Kodero,  Chianja family",
         "profileImage": "/images/sabina.jpg",
         "role": "Second Wife"
       }
@@ -211,7 +211,7 @@
         "id": 501,
         "name": "Julita Odero",
         "bio": "Wife of Maebo Kodero",
-        "profileImage":"/images/julita.jpg",
+        "profileImage":"/images/ajuli.jpg",
         "role": "Wife"
       }
     ],
@@ -227,7 +227,7 @@
       {
         "id": 101,
         "name": "Grace Ghati Kodero",
-        "bio": "Daughter of Selina Mabere",
+        "bio": " Selina Mabere",
         "profileImage": "/images/ghati.jpg",
         "role": "Wife"
       },
@@ -251,7 +251,7 @@
       {
         "id": 103,
         "name": "Rosemary Abuso Kodero",
-        "bio": "Daughter of Selina Mabere",
+        "bio": " Selina Mabere",
         "birthDate":"1975",
         "profileImage": "/images/rosemary.jpg",
         "role": "Wife"
@@ -276,7 +276,7 @@
       {
         "id": 201,
         "name": "Bahati Moses Kodero",
-        "bio": "Son of Sabina Kodero, Doctor by profession",
+        "bio": "Sabina Kodero, Doctor by profession",
         "birthDate":"February 10, 1980",
         "profileImage": "/images/Bahati.jpg",
         "role": "Husband"
@@ -326,7 +326,7 @@
       {
         "id": 205,
         "name": "Ubbah Kodero",
-        "bio": "Son of Sabina Kodero",
+        "bio": "Sabina Kodero",
         "profileImage": "/images/ubbah.jpg",
         "role": "Husband"
       },
@@ -350,7 +350,7 @@
       {
         "id": 207,
         "name": "Easter Kodero",
-        "bio": "Daughter of Sabina Kodero",
+        "bio": " Sabina Kodero",
         "profileImage": "/images/easter-kodero.jpg",
         "role": "Wife"
       },
@@ -373,7 +373,7 @@
       {
         "id": 301,
         "name": "Brian Kodero",
-        "bio": "Son of Adda Kodero",
+        "bio": "Adda Kodero",
         "profileImage": "/images/brian-kodero.jpg",
         "role": "Husband"
       },
@@ -397,7 +397,7 @@
         "id": 502,
         "name": "Nicholas Ochola Maebo",
         "birthDate":"April, 1994",
-        "bio": "Son of Julita and Maebo Odero",
+        "bio": "Julita and Maebo Odero",
         "profileImage": "/images/ochola.jpg",
         "role": "Husband"
       },
@@ -421,7 +421,7 @@
       {
         "id": 504,
         "name": "Sheilah Aoko Biko",
-        "bio": "Daughter of Julita and Maebo Odero, Currently married to Steve Biko Orang'a",
+        "bio": " Julita and Maebo Odero, Currently married to Steve Biko Orang'a",
         "birthDate":"1988",
         "profileImage": "/images/Mercello.jpg",
         "role": "Wife"
@@ -441,7 +441,7 @@
     "name": "Winnie Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Daughter of Sabina Kodero",
+    "bio": " Sabina Kodero",
     "profileImage": "/images/winnie-kodero.jpg"
   },
   {
@@ -449,15 +449,15 @@
     "name": "Mabere Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Son of Sabina Kodero",
-    "profileImage": "/images/mabere-kodero.jpg"
+    "bio": "Sabina Kodero",
+    "profileImage": "/images/maber.jpg"
   },
   {
     "id": "edwin_maswabe",
     "name": "Edwin Maswabe",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Son of Sabina Kodero",
+    "bio": "Sabina Kodero",
     "profileImage": "/images/edwin.jpg"
   },
   {
@@ -465,7 +465,7 @@
     "name": "Ken Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Son of Adda Kodero",
+    "bio": "Adda Kodero",
     "profileImage": "/images/ken-kodero.jpg"
   },
   {
@@ -473,7 +473,7 @@
     "name": "Clin Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Son of Adda Kodero",
+    "bio": "Adda Kodero",
     "profileImage": "/images/clin-kodero.jpg"
   },
   {
@@ -481,7 +481,7 @@
     "name": "June Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Daughter of Adda Kodero",
+    "bio": " Adda Kodero",
     "profileImage": "/images/june-kodero.jpg"
   },
   {
@@ -489,7 +489,7 @@
     "name": "Peninah Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Daughter of Judith Kodero",
+    "bio": " Judith Kodero",
     "profileImage": "/images/nina.jpg"
   },
   {
@@ -497,7 +497,7 @@
     "name": "Felicia Kodero",
     "generation": 4,
     "nodeType": "person",
-    "bio": "Daughter of Judith Kodero",
+    "bio": " Judith Kodero",
     "profileImage": "/images/felicia.jpg"
   },
   {
@@ -506,7 +506,7 @@
     "generation": 4,
     "birthDate": "2022",
     "nodeType": "person",
-    "bio": "Son of Judith Kodero",
+    "bio": "Judith Kodero",
     "profileImage": "/images/wesly.jpg"
   },
   {
@@ -524,7 +524,7 @@
     "generation": 5,
     "nodeType": "person",
     "birthDate": "2010-10-26",
-    "bio": "Son of Bahati Kodero",
+    "bio": "Bahati Kodero",
     "profileImage": "/images/arshavin.jpg"
   },
   {
@@ -533,7 +533,7 @@
     "generation": 5,
     "nodeType": "person",
     "birthDate": "2018-06-20",
-    "bio": "Son of Bahati Kodero",
+    "bio": "Bahati Kodero",
     "profileImage": "/images/alvin.jpg"
   },
   {
@@ -542,7 +542,7 @@
     "generation": 5,
     "nodeType": "person",
     "birthDate": "2014-02-25",
-    "bio": "Son of Bahati Kodero",
+    "bio": "Bahati Kodero",
     "profileImage": "/images/abel.jpg"
   },
   {
@@ -566,7 +566,7 @@
     "name": "Dosantos Oyucho",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Odiwuor Dosantos Oyucho (Sammy) First born son of Rehema Awuor. First male grandson of Sabina A student of The University of Nairobi. Studying Political science",
+    "bio": "Odiwuor Dosantos Oyucho (Sammy) First born Rehema Awuor. First male grandSabina A student of The University of Nairobi. Studying Political science",
     "profileImage": "/images/Dosantos.jpg"
   },
   {
@@ -574,7 +574,7 @@
     "name": "Sabina Ishimwe Kodero",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Daughter of Ubbah Kodero",
+    "bio": " Ubbah Kodero",
     "profileImage": "/images/sabina1.jpg"
   },
   {
@@ -590,7 +590,7 @@
     "name": "Banzubaze Augustino Kodero",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Ubbah Kodero",
+    "bio": "Ubbah Kodero",
     "profileImage": "/images/benzo.jpg"
   },
   {
@@ -606,7 +606,7 @@
     "name": "Brian Jr",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Brian Kodero",
+    "bio": "Brian Kodero",
     "profileImage": "/images/brian-jr.jpg"
   },
   {
@@ -622,7 +622,7 @@
     "name": "James Ochola",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Nicholas Odero",
+    "bio": "Nicholas Odero",
     "profileImage": "/images/james-ochola.jpg"
   },
   {
@@ -631,7 +631,7 @@
     "birthDate":"January 4, 2006",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Daughter of Sheila Aoko",
+    "bio": " Sheila Aoko",
     "profileImage": "/images/lavender.jpg"
   },
   {
@@ -639,7 +639,7 @@
     "name": "Beyonce Biko",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Daughter of Marcella Odero",
+    "bio": " Marcella Odero",
     "profileImage": "/images/beyonce.jpg"
   },
   {
@@ -648,7 +648,7 @@
     "birthDate":"July 17, 2024",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Sheilla Aoko",
+    "bio": "Sheilla Aoko",
     "profileImage": "/images/ubber.jpg"
   },
   {
@@ -657,7 +657,7 @@
     "generation": 5,
     "nodeType": "person",
     "birthDate":"September 23, 2019",
-    "bio": "Daughter of Sheila Aoko",
+    "bio": " Sheila Aoko",
     "profileImage": "/images/Daizy.jpg"
   },
   {
@@ -666,7 +666,7 @@
     "birthDate":"May 16, 2016",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Sheilla Aoko",
+    "bio": "Sheilla Aoko",
     "profileImage": "/images/Kelly.jpg"
   },
   {
@@ -674,7 +674,7 @@
     "name": "Donbosco Ngeso",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Ghati Kodero",
+    "bio": "Ghati Kodero",
     "profileImage": "/images/bosco.jpg"
   },
   {
@@ -722,7 +722,7 @@
     "name": "Beatrice Jared",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Daughter of Rosemary",
+    "bio": " Rosemary",
     "profileImage": "/images/biti.jpg"
   },
   {
@@ -730,7 +730,7 @@
     "name": "Collins Powell",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Rosemary",
+    "bio": "Rosemary",
     "profileImage": "/images/collins-powell.jpg"
   },
   {
@@ -738,7 +738,7 @@
     "name": "Samwell Jared",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Rosemary",
+    "bio": "Rosemary",
     "profileImage": "/images/samwel.jpg"
   },
   {
@@ -754,7 +754,7 @@
     "name": "Davis Jared",
     "generation": 5,
     "nodeType": "person",
-    "bio": "Son of Rosemary",
+    "bio": "Rosemary",
     "profileImage": "/images/davis.jpg"
   }
 ]
